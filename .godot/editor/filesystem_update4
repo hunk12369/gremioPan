@@ -1,3 +1,5 @@
-res://escenario_inicio.tscn
-res://Sprite2D.gd
+res://personaje.tscn
 res://personaje.gd
+res://escenario_inicio.tscn
+res://personaje_sprite.gd
+res://personaje_movimiento.gd

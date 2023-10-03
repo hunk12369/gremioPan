@@ -1,0 +1,155 @@
+[gd_scene load_steps=14 format=3 uid="uid://bqga6qutk3efu"]
+
+[ext_resource type="Texture2D" uid="uid://beq3jpqdi0ykj" path="res://assets/Commissions/Rogue.png" id="1_1c4s3"]
+[ext_resource type="Script" path="res://personaje_movimiento.gd" id="1_i54e5"]
+[ext_resource type="Script" path="res://personaje.gd" id="2_ekakm"]
+[ext_resource type="Texture2D" uid="uid://xiuu8laa4nud" path="res://assets/Objects/Effect0.png" id="4_gq2hb"]
+
+[sub_resource type="Animation" id="Animation_ld2d5"]
+resource_name = "stay"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 0]
+}
+
+[sub_resource type="Animation" id="Animation_7ef3w"]
+resource_name = "walk_down"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_hxtt7"]
+resource_name = "walk_left"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_0enw6"]
+resource_name = "walk_right"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [8, 9, 10, 11]
+}
+
+[sub_resource type="Animation" id="Animation_2w225"]
+resource_name = "walk_up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [12, 13, 14, 15]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_shhyu"]
+_data = {
+"stay": SubResource("Animation_ld2d5"),
+"walk_down": SubResource("Animation_7ef3w"),
+"walk_left": SubResource("Animation_hxtt7"),
+"walk_right": SubResource("Animation_0enw6"),
+"walk_up": SubResource("Animation_2w225")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rkq7s"]
+radius = 5.0
+height = 16.0
+
+[sub_resource type="Animation" id="Animation_v0mrl"]
+resource_name = "animation_attack"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2nrbf"]
+_data = {
+"animation_attack": SubResource("Animation_v0mrl")
+}
+
+[node name="personaje" type="CharacterBody2D"]
+script = ExtResource("1_i54e5")
+
+[node name="personaje" type="Sprite2D" parent="."]
+position = Vector2(62, 146)
+texture = ExtResource("1_1c4s3")
+hframes = 4
+vframes = 4
+script = ExtResource("2_ekakm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="personaje"]
+libraries = {
+"": SubResource("AnimationLibrary_shhyu")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(62, 146)
+shape = SubResource("CapsuleShape2D_rkq7s")
+
+[node name="Timer_dash" type="Timer" parent="."]
+wait_time = 0.25
+
+[node name="Timer_dash_cooldown" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="atack_sprite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(166, 205)
+texture = ExtResource("4_gq2hb")
+hframes = 2
+vframes = 3
+frame = 5
+
+[node name="AnimationAttack" type="AnimationPlayer" parent="atack_sprite"]
+libraries = {
+"": SubResource("AnimationLibrary_2nrbf")
+}
+
+[connection signal="timeout" from="Timer_dash" to="." method="_on_timer_dash_timeout"]
+[connection signal="timeout" from="Timer_dash_cooldown" to="." method="_on_timer_dash_cooldown_timeout"]

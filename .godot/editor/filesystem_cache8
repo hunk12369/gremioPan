@@ -1,11 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696214221
-escenario_inicio.tscn::PackedScene::1695431322784911564::1696213942::0::1::::<><>::uid://bcom48kfrewvf::::res://icon.svg<>res://personaje.gd
+::res://::1696296328
+escenario_inicio.tscn::PackedScene::1695431322784911564::1696274118::0::1::::<><>::uid://bqga6qutk3efu::::res://personaje.tscn
 icon.svg::CompressedTexture2D::2556481800431119351::1696123478::1696123582::1::::<><>::
-personaje.gd::GDScript::-1::1696213942::0::1::::<>Sprite2D<>::
+personaje.gd::GDScript::-1::1696296723::0::1::::<>Sprite2D<>::
+personaje.tscn::PackedScene::3521884680184461998::1696296723::0::1::::<><>::uid://beq3jpqdi0ykj::::res://assets/Commissions/Rogue.png<>res://personaje.gd
 ::res://assets/::1696214252
 README.txt::TextFile::-1::1536007556::0::1::::<><>::
-::res://assets/Characters/::1536007532
+::res://assets/Characters/::1696214262
 Aquatic0.png::CompressedTexture2D::3365623492203287525::1392245864::1696214261::1::::<><>::
 Aquatic1.png::CompressedTexture2D::1621530802437268686::1392245864::1696214261::1::::<><>::
 Avian0.png::CompressedTexture2D::3838469395916065931::1394849964::1696214261::1::::<><>::
@@ -38,7 +39,7 @@ Slime0.png::CompressedTexture2D::3330411192261943203::1391240188::1696214262::1:
 Slime1.png::CompressedTexture2D::6064304259959197893::1391240188::1696214262::1::::<><>::
 Undead0.png::CompressedTexture2D::6381247147201620203::1394577102::1696214262::1::::<><>::
 Undead1.png::CompressedTexture2D::6599091404613816985::1394577102::1696214262::1::::<><>::
-::res://assets/Commissions/::1536007533
+::res://assets/Commissions/::1696214262
 Engineer Clothes.png::CompressedTexture2D::9161412920196199682::1420057318::1696214262::1::::<><>::
 Engineer.png::CompressedTexture2D::4981003607206688291::1395621304::1696214262::1::::<><>::
 Icons.png::CompressedTexture2D::357623801335927200::1430692202::1696214262::1::::<><>::
@@ -52,14 +53,14 @@ Template.png::CompressedTexture2D::2258725465599076814::1403129064::1696214261::
 Warrior Clothes Back.png::CompressedTexture2D::6254263256901765953::1420057722::1696214261::1::::<><>::
 Warrior Clothes.png::CompressedTexture2D::8616003516471183171::1420057700::1696214261::1::::<><>::
 Warrior.png::CompressedTexture2D::2901245658695228878::1395621354::1696214261::1::::<><>::
-::res://assets/Examples/::1536007533
+::res://assets/Examples/::1696214261
 Logo.png::CompressedTexture2D::4471426606558152119::1391649790::1696214261::1::::<><>::
-::res://assets/GUI/::1536007533
+::res://assets/GUI/::1696214261
 GUI0.png::CompressedTexture2D::6200016333132278649::1392246244::1696214261::1::::<><>::
 GUI1.png::CompressedTexture2D::8677762760395809574::1392246244::1696214261::1::::<><>::
 SDS_6x6.ttf::FontFile::246659924214677545::1391289952::1696214260::1::::<><>::
 SDS_8x8.ttf::FontFile::6177568250440722641::1397788988::1696214260::1::::<><>::
-::res://assets/Items/::1536007533
+::res://assets/Items/::1696214261
 Ammo.png::CompressedTexture2D::8328451254994108152::1391399530::1696214261::1::::<><>::
 Amulet.png::CompressedTexture2D::5358874113773001849::1391143506::1696214260::1::::<><>::
 Armor.png::CompressedTexture2D::6392928620757319233::1393644168::1696214260::1::::<><>::
@@ -85,7 +86,7 @@ Shield.png::CompressedTexture2D::5135065296718964767::1391143558::1696214260::1:
 ShortWep.png::CompressedTexture2D::7238238186418153681::1391143566::1696214260::1::::<><>::
 Tool.png::CompressedTexture2D::6510310812980520121::1392341466::1696214260::1::::<><>::
 Wand.png::CompressedTexture2D::8186530750876524056::1391143580::1696214261::1::::<><>::
-::res://assets/Objects/::1536007534
+::res://assets/Objects/::1696214261
 Decor0.png::CompressedTexture2D::1645381900116088123::1413321760::1696214261::1::::<><>::
 Decor1.png::CompressedTexture2D::4273273392162784089::1413321760::1696214261::1::::<><>::
 Door0.png::CompressedTexture2D::7815806067127086432::1413324284::1696214261::1::::<><>::
