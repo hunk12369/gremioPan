@@ -1,0 +1,8 @@
+res://scenes_scenes/stage3.tscn
+res://scenes_scenes/stage1.tscn
+res://scenes_scenes/cliff_side.tscn
+res://scenes_scenes/stage2.tscn
+res://scripts_scenes/stage1.gd
+res://scripts_scenes/gglobal.gd
+res://scenes_scenes/stage2.gd
+res://scripts_scenes/stage2.gd

@@ -11,5 +11,18 @@ config_version=5
 [application]
 
 config/name="gremioPan"
+run/main_scene="res://scenes_scenes/stage1.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Gglobal="*res://scripts_scenes/gglobal.gd"
+
+[display]
+
+window/stretch/scale=0.5
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
