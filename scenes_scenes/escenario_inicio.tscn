@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://yfjrhe6ori8c"]
+
+[ext_resource type="Script" path="res://scenes_scenes/escenario_inicio.gd" id="1_lnqac"]
+[ext_resource type="PackedScene" uid="uid://bqga6qutk3efu" path="res://scenes_scenes/personaje.tscn" id="2_1an60"]
+[ext_resource type="Texture2D" uid="uid://xpbg1vhge16v" path="res://assets/Objects/Decor0.png" id="3_l0i66"]
+[ext_resource type="Script" path="res://scenes_scenes/Camera2D.gd" id="4_08wi5"]
+[ext_resource type="PackedScene" uid="uid://bwy4rl4lfwnth" path="res://scenes_scenes/ui/ui.tscn" id="5_q6ruk"]
+[ext_resource type="Texture2D" uid="uid://b0iq00i4ldyia" path="res://assets/Characters/Cat0.png" id="6_jpgq0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nfah7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1v5e3"]
+radius = 10.5475
+
+[node name="escenario_inicio" type="Node2D"]
+script = ExtResource("1_lnqac")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_1an60")]
+position = Vector2(578, 326)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(574, 322)
+process_callback = 0
+position_smoothing_enabled = true
+script = ExtResource("4_08wi5")
+
+[node name="ui" parent="." instance=ExtResource("5_q6ruk")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Decor0" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(381, 289.5)
+scale = Vector2(1.95313, 1.40057)
+texture = ExtResource("3_l0i66")
+hframes = 8
+vframes = 18
+frame = 8
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(380, 290)
+scale = Vector2(1.95312, 1.40057)
+shape = SubResource("RectangleShape2D_nfah7")
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
+
+[node name="enemigo" type="Sprite2D" parent="CharacterBody2D2"]
+position = Vector2(843, 411)
+scale = Vector2(2, 2)
+texture = ExtResource("6_jpgq0")
+hframes = 8
+vframes = 5
+frame = 24
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D2"]
+position = Vector2(843, 411)
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_1v5e3")
+
+[connection signal="quit_to_menu" from="ui" to="." method="_on_ui_quit_to_menu"]

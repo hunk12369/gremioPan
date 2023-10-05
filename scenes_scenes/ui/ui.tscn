@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwy4rl4lfwnth"]
+
+[ext_resource type="Script" path="res://script_scenes/ui.gd" id="1_hwft1"]
+[ext_resource type="Texture2D" uid="uid://daqpxgsh5pscw" path="res://assets_reales/life.png" id="2_in8vw"]
+[ext_resource type="PackedScene" uid="uid://rhjo1uacvu7t" path="res://scenes_scenes/ui/game_menu.tscn" id="2_qdc2e"]
+
+[node name="ui" type="CanvasLayer"]
+script = ExtResource("1_hwft1")
+
+[node name="Life" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Life"]
+layout_mode = 2
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 1120.0
+offset_bottom = 616.0
+
+[node name="Label" type="Label" parent="Life/VBoxContainer"]
+layout_mode = 2
+text = "vida"
+
+[node name="Sprite2D" type="Sprite2D" parent="Life/VBoxContainer/Label"]
+position = Vector2(7.5, 9)
+scale = Vector2(0.911765, 0.914286)
+texture = ExtResource("2_in8vw")
+hframes = 6
+vframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Life/VBoxContainer/Label/Sprite2D"]
+root_node = NodePath("")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameMenu" parent="Control" instance=ExtResource("2_qdc2e")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[connection signal="main_menu" from="Control/GameMenu" to="." method="_on_game_menu_main_menu"]
+[connection signal="return_to_game" from="Control/GameMenu" to="." method="_on_game_menu_return_to_game"]

@@ -1,9 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696296328
-escenario_inicio.tscn::PackedScene::1695431322784911564::1696274118::0::1::::<><>::uid://bqga6qutk3efu::::res://personaje.tscn
-icon.svg::CompressedTexture2D::2556481800431119351::1696123478::1696123582::1::::<><>::
-personaje.gd::GDScript::-1::1696296723::0::1::::<>Sprite2D<>::
-personaje.tscn::PackedScene::3521884680184461998::1696296723::0::1::::<><>::uid://beq3jpqdi0ykj::::res://assets/Commissions/Rogue.png<>res://personaje.gd
+::res://::1696537326
 ::res://assets/::1696214252
 README.txt::TextFile::-1::1536007556::0::1::::<><>::
 ::res://assets/Characters/::1696214262
@@ -111,3 +107,31 @@ Trap1.png::CompressedTexture2D::486569496598952948::1413238084::1696214260::1:::
 Tree0.png::CompressedTexture2D::1760501786922860351::1437936864::1696214260::1::::<><>::
 Tree1.png::CompressedTexture2D::3468598231288343952::1437936864::1696214260::1::::<><>::
 Wall.png::CompressedTexture2D::3250528593034823750::1437936904::1696214260::1::::<><>::
+::res://assets_reales/::1696513627
+cuarto.png::CompressedTexture2D::6693099482990205118::1696432675::1696467531::1::::<><>::
+life.png::CompressedTexture2D::7193244266600898010::1696513553::1696513627::1::::<><>::
+objetos.png::CompressedTexture2D::3575003171549031819::1696453808::1696467531::1::::<><>::
+::res://assets_reales/fonts/::1696471422
+Enchanted Land II.png::CompressedTexture2D::6957460907673690364::1457642224::1696471422::1::::<><>::
+Enchanted Land.otf::FontFile::5044717393410966945::1457706702::1696471422::1::::<><>::
+readme.txt::TextFile::-1::1457564036::0::1::::<><>::
+::res://globals/::1696520979
+globals.gd::GDScript::-1::1696520979::0::1::::<>Node<>::
+::res://scenes_scenes/::1696537031
+Camera2D.gd::GDScript::-1::1696514780::0::1::::<>Camera2D<>::
+escenario_inicio.gd::GDScript::-1::1696478707::0::1::::<>Node2D<>::
+escenario_inicio.tscn::PackedScene::1695431322784911564::1696537030::0::1::::<><>::res://scenes_scenes/escenario_inicio.gd<>uid://bqga6qutk3efu::::res://scenes_scenes/personaje.tscn<>uid://xpbg1vhge16v::::res://assets/Objects/Decor0.png<>res://scenes_scenes/Camera2D.gd<>uid://bwy4rl4lfwnth::::res://scenes_scenes/ui/ui.tscn<>uid://b0iq00i4ldyia::::res://assets/Characters/Cat0.png
+icon.svg::CompressedTexture2D::2556481800431119351::1696123478::1696473724::1::::<><>::
+Menu.gd::GDScript::-1::1696514116::0::1::::<>Control<>::
+menu.tscn::PackedScene::3462753901598631878::1696537030::0::1::::<><>::uid://cd4x010hmj2an::::res://assets_reales/fonts/Enchanted Land.otf<>res://scenes_scenes/Menu.gd
+new_theme.tres::Theme::6010390749748365908::1696471190::0::1::::<><>::
+personaje.gd::GDScript::-1::1696531427::0::1::::<>Sprite2D<>::
+personaje.tscn::PackedScene::3521884680184461998::1696537031::0::1::::<><>::res://scenes_scenes/personaje_movimiento.gd<>uid://beq3jpqdi0ykj::::res://assets/Commissions/Rogue.png<>res://scenes_scenes/personaje.gd<>uid://xiuu8laa4nud::::res://assets/Objects/Effect0.png
+personaje_movimiento.gd::GDScript::-1::1696530782::0::1::::<>CharacterBody2D<>::
+theme_menu.tres::Theme::1987336511022144981::1696514363::0::1::::<><>::uid://cd4x010hmj2an::::res://assets_reales/fonts/Enchanted Land.otf
+::res://scenes_scenes/ui/::1696537031
+game_menu.tscn::PackedScene::1208233836681250027::1696537030::0::1::::<><>::uid://3kxe3erbqcxp::::res://scenes_scenes/theme_menu.tres<>res://script_scenes/GameMenu.gd
+ui.tscn::PackedScene::3981912084177390177::1696537031::0::1::::<><>::res://script_scenes/ui.gd<>uid://daqpxgsh5pscw::::res://assets_reales/life.png<>uid://rhjo1uacvu7t::::res://scenes_scenes/ui/game_menu.tscn
+::res://script_scenes/::1696514780
+GameMenu.gd::GDScript::-1::1696476785::0::1::::<>Control<>::
+ui.gd::GDScript::-1::1696514780::0::1::::<>CanvasLayer<>::

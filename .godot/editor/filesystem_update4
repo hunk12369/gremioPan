@@ -1,5 +1,7 @@
-res://personaje.tscn
-res://personaje.gd
-res://escenario_inicio.tscn
-res://personaje_sprite.gd
-res://personaje_movimiento.gd
+res://scenes_scenes/escenario_inicio.tscn
+res://scenes_scenes/theme_menu.tres
+res://scenes_scenes/personaje.gd
+res://scenes_scenes/menu.tscn
+res://scenes_scenes/ui/game_menu.tscn
+res://scenes_scenes/ui/ui.tscn
+res://scenes_scenes/personaje.tscn
