@@ -13,6 +13,7 @@
 radius = 10.5475
 
 [node name="escenario_inicio" type="Node2D"]
+process_mode = 1
 script = ExtResource("1_lnqac")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_1an60")]
@@ -56,4 +57,6 @@ position = Vector2(843, 411)
 scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_1v5e3")
 
+[connection signal="menu_close" from="ui" to="." method="_on_ui_menu_close"]
+[connection signal="menu_opened" from="ui" to="." method="_on_ui_menu_opened"]
 [connection signal="quit_to_menu" from="ui" to="." method="_on_ui_quit_to_menu"]

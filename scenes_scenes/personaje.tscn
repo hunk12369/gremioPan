@@ -1,96 +1,106 @@
-[gd_scene load_steps=15 format=3 uid="uid://bqga6qutk3efu"]
+[gd_scene load_steps=25 format=3 uid="uid://bqga6qutk3efu"]
 
 [ext_resource type="Script" path="res://scenes_scenes/personaje_movimiento.gd" id="1_xa2nh"]
-[ext_resource type="Texture2D" uid="uid://beq3jpqdi0ykj" path="res://assets/Commissions/Rogue.png" id="2_w6jxy"]
-[ext_resource type="Script" path="res://scenes_scenes/personaje.gd" id="3_i7jfp"]
+[ext_resource type="Texture2D" uid="uid://bysvqmrhlffga" path="res://assets_reales/character/idle/idle0.png" id="2_b0q3m"]
+[ext_resource type="Texture2D" uid="uid://bh0tn8tlj6rq4" path="res://assets_reales/character/idle/idle1.png" id="3_81kxr"]
+[ext_resource type="Texture2D" uid="uid://chhxvxdgthqke" path="res://assets_reales/character/idle/idle2.png" id="4_7g0s4"]
 [ext_resource type="Texture2D" uid="uid://xiuu8laa4nud" path="res://assets/Objects/Effect0.png" id="4_c7pot"]
+[ext_resource type="Texture2D" uid="uid://731w3hkae1w5" path="res://assets_reales/character/idleback/idleback0.png" id="5_mviml"]
+[ext_resource type="Texture2D" uid="uid://djewa4hbktvfp" path="res://assets_reales/character/idleback/idleback1.png" id="6_n0puh"]
+[ext_resource type="Texture2D" uid="uid://dtl74r7dt0txm" path="res://assets_reales/character/walkback/walkback0.png" id="7_okbhh"]
+[ext_resource type="Texture2D" uid="uid://dxtyq5lj3hjyx" path="res://assets_reales/character/walkback/walkback1.png" id="8_cc0ub"]
+[ext_resource type="Texture2D" uid="uid://cu0k3sv8jrki3" path="res://assets_reales/character/walkback/walkback2.png" id="9_lrtfw"]
+[ext_resource type="Texture2D" uid="uid://gnx8d3ser2em" path="res://assets_reales/character/walkback/walkback3.png" id="10_vi6mc"]
+[ext_resource type="Texture2D" uid="uid://dqkldf05frq66" path="res://assets_reales/character/walkfront/front0.png" id="11_wvs3v"]
+[ext_resource type="Texture2D" uid="uid://rf3tupx603e2" path="res://assets_reales/character/walkfront/front1.png" id="12_wcg1d"]
+[ext_resource type="Texture2D" uid="uid://csv7rpmfplvw0" path="res://assets_reales/character/walkfront/front2.png" id="13_ugudv"]
+[ext_resource type="Texture2D" uid="uid://oguxtnhbimij" path="res://assets_reales/character/walkfront/front3.png" id="14_aqhuq"]
+[ext_resource type="Texture2D" uid="uid://bxm282jtvehtq" path="res://assets_reales/character/walkL/walkL0.png" id="15_oy0xm"]
+[ext_resource type="Texture2D" uid="uid://digu1ti0cb3og" path="res://assets_reales/character/walkL/walkL1.png" id="16_u0vt1"]
+[ext_resource type="Texture2D" uid="uid://bixoctj1lfeu6" path="res://assets_reales/character/walkL/walkL2.png" id="17_p0wss"]
+[ext_resource type="Texture2D" uid="uid://bm3uvgck2yure" path="res://assets_reales/character/walkL/walkL3.png" id="18_rbwaj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1d81n"]
 radius = 24.0
 
-[sub_resource type="Animation" id="Animation_ld2d5"]
-resource_name = "stay"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.3, 0.6),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 0]
-}
-
-[sub_resource type="Animation" id="Animation_7ef3w"]
-resource_name = "walk_down"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3]
-}
-
-[sub_resource type="Animation" id="Animation_hxtt7"]
-resource_name = "walk_left"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.6, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [4, 5, 6, 7]
-}
-
-[sub_resource type="Animation" id="Animation_0enw6"]
-resource_name = "walk_right"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.6, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [8, 9, 10, 11]
-}
-
-[sub_resource type="Animation" id="Animation_2w225"]
-resource_name = "walk_up"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.6, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [12, 13, 14, 15]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_shhyu"]
-_data = {
-"stay": SubResource("Animation_ld2d5"),
-"walk_down": SubResource("Animation_7ef3w"),
-"walk_left": SubResource("Animation_hxtt7"),
-"walk_right": SubResource("Animation_0enw6"),
-"walk_up": SubResource("Animation_2w225")
-}
+[sub_resource type="SpriteFrames" id="SpriteFrames_t3sbj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_b0q3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_81kxr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7g0s4")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_mviml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_n0puh")
+}],
+"loop": true,
+"name": &"idleback",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_okbhh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cc0ub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_lrtfw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_vi6mc")
+}],
+"loop": true,
+"name": &"walkback",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_wvs3v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_wcg1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ugudv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_aqhuq")
+}],
+"loop": true,
+"name": &"walkfront",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_oy0xm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_u0vt1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_p0wss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_rbwaj")
+}],
+"loop": true,
+"name": &"walkright",
+"speed": 8.0
+}]
 
 [sub_resource type="Animation" id="Animation_v0mrl"]
 resource_name = "animation_attack"
@@ -126,17 +136,11 @@ collision_layer = 3
 position = Vector2(87, 146)
 shape = SubResource("CircleShape2D_1d81n")
 
-[node name="personaje" type="Sprite2D" parent="."]
+[node name="AnimationPlayer" type="AnimatedSprite2D" parent="."]
 position = Vector2(62, 146)
-texture = ExtResource("2_w6jxy")
-hframes = 4
-vframes = 4
-script = ExtResource("3_i7jfp")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="personaje"]
-libraries = {
-"": SubResource("AnimationLibrary_shhyu")
-}
+sprite_frames = SubResource("SpriteFrames_t3sbj")
+animation = &"walkfront"
+frame_progress = 0.956051
 
 [node name="Timer_dash" type="Timer" parent="."]
 wait_time = 0.25
@@ -161,7 +165,7 @@ libraries = {
 position = Vector2(62, 146)
 shape = SubResource("CapsuleShape2D_rkq7s")
 
-[connection signal="body_entered" from="attack_area" to="personaje" method="_on_attack_area_body_entered"]
-[connection signal="body_exited" from="attack_area" to="personaje" method="_on_attack_area_body_exited"]
+[connection signal="body_entered" from="attack_area" to="." method="_on_attack_area_body_entered"]
+[connection signal="body_exited" from="attack_area" to="." method="_on_attack_area_body_exited"]
 [connection signal="timeout" from="Timer_dash" to="." method="_on_timer_dash_timeout"]
 [connection signal="timeout" from="Timer_dash_cooldown" to="." method="_on_timer_dash_cooldown_timeout"]

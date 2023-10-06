@@ -36,6 +36,7 @@ vframes = 4
 root_node = NodePath("")
 
 [node name="Control" type="Control" parent="."]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -45,6 +46,7 @@ grow_vertical = 2
 
 [node name="GameMenu" parent="Control" instance=ExtResource("2_qdc2e")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 
 [connection signal="main_menu" from="Control/GameMenu" to="." method="_on_game_menu_main_menu"]
